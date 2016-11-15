@@ -1,0 +1,143 @@
+/*
+DELETE AlbumSet
+GO
+DELETE Imagens
+GO
+DELETE FigurinhasDesejadasSet
+GO
+DELETE FigurinhasOfertadasSet
+GO
+DELETE FigurinhaSet
+GO
+DELETE OfertasSet
+GO
+DELETE UsuarioSet
+GO
+*/
+-- Insere usuários de testes
+-- 1
+INSERT INTO UsuarioSet(Nome, Email, Login, Senha)
+     VALUES('Testanildo da Silva','teste1@teste.com','Teste1','sa');
+-- 2
+INSERT INTO UsuarioSet(Nome, Email, Login, Senha)
+     VALUES('Testado Castro','teste2@teste.com','Teste2','sa');
+     
+go
+
+-- Insere um novo album de figurinhas
+-- 1
+INSERT INTO AlbumSet(Titulo,Descricao)
+    VALUES('Copa do Mundo de 2014','Album de figurinhas da copa do mundo Brasil!');
+go
+
+-- Insere figurinhas
+-- 1
+INSERT INTO FigurinhaSet(Album_Id,Nome,Equipe,Apelido)
+    VALUES(1,'Neymar Jr.','Brasil','Cai-cai');
+-- 2
+INSERT INTO FigurinhaSet(Album_Id,Nome,Equipe,Apelido)
+    VALUES(1,'Luís Fabiano','Brasil','Fabuloso');
+-- 3
+INSERT INTO FigurinhaSet(Album_Id,Nome,Equipe,Apelido)
+    VALUES(1,'Ronaldinho Gaucho','Brasil','Pilantra');
+-- 4
+INSERT INTO FigurinhaSet(Album_Id,Nome,Equipe,Apelido)
+    VALUES(1,'Barcos','Argentina','Pirata');
+-- 5
+INSERT INTO FigurinhaSet(Album_Id,Nome,Equipe,Apelido)
+    VALUES(1,'Oscar','Brasil','Oscar');
+-- 6
+INSERT INTO FigurinhaSet(Album_Id,Nome,Equipe,Apelido)
+    VALUES(1,'Kleber','Brasil','Gladiador');
+-- 7
+INSERT INTO FigurinhaSet(Album_Id,Nome,Equipe,Apelido)
+    VALUES(1,'Jonas','Brasil','Mestre Jonas');
+Go
+
+-- Insere ofertas
+-- 1
+INSERT INTO OfertasSet(Usuario_Id)
+    VALUES(1);
+-- 2
+INSERT INTO OfertasSet(Usuario_Id)
+    VALUES(1);
+-- 3
+INSERT INTO OfertasSet(Usuario_Id)
+    VALUES(1);
+-- 4
+INSERT INTO OfertasSet(Usuario_Id)
+    VALUES(2);
+-- 5
+INSERT INTO OfertasSet(Usuario_Id)
+    VALUES(2);
+-- 6
+INSERT INTO OfertasSet(Usuario_Id)
+    VALUES(2);
+-- 7
+INSERT INTO OfertasSet(Usuario_Id)
+    VALUES(2);
+go
+
+-- Insere figurinhas nas ofertas
+--DELETE  FigurinhasOfertadasSet;
+--GO
+--DELETE  FigurinhasDesejadasSet;
+--GO
+
+-- Oferta 1
+INSERT INTO FigurinhasOfertadasSet(OfertasId,Figurinha_Id)
+    VALUES(1,1);
+INSERT INTO FigurinhasDesejadasSet(OfertasId,Figurinha_Id)
+    VALUES(1,2);
+-- Oferta 2
+INSERT INTO FigurinhasOfertadasSet(OfertasId,Figurinha_Id)
+    VALUES(2,3);
+INSERT INTO FigurinhasDesejadasSet(OfertasId,Figurinha_Id)
+    VALUES(2,4);
+-- Oferta 3
+INSERT INTO FigurinhasOfertadasSet(OfertasId,Figurinha_Id)
+    VALUES(3,5);
+INSERT INTO FigurinhasDesejadasSet(OfertasId,Figurinha_Id)
+    VALUES(3,6);
+
+
+-- Oferta 4
+INSERT INTO FigurinhasOfertadasSet(OfertasId,Figurinha_Id)
+    VALUES(4,2);
+INSERT INTO FigurinhasDesejadasSet(OfertasId,Figurinha_Id)
+    VALUES(4,1);
+-- Oferta 5
+INSERT INTO FigurinhasOfertadasSet(OfertasId,Figurinha_Id)
+    VALUES(5,4);
+INSERT INTO FigurinhasDesejadasSet(OfertasId,Figurinha_Id)
+    VALUES(5,3);
+-- Oferta 6
+INSERT INTO FigurinhasOfertadasSet(OfertasId,Figurinha_Id)
+    VALUES(6,6);
+INSERT INTO FigurinhasDesejadasSet(OfertasId,Figurinha_Id)
+    VALUES(6,5);
+-- Oferta 7
+INSERT INTO FigurinhasOfertadasSet(OfertasId,Figurinha_Id)
+    VALUES(7,7);
+INSERT INTO FigurinhasOfertadasSet(OfertasId,Figurinha_Id)
+    VALUES(7,6);
+INSERT INTO FigurinhasDesejadasSet(OfertasId,Figurinha_Id)
+    VALUES(7,1);
+INSERT INTO FigurinhasDesejadasSet(OfertasId,Figurinha_Id)
+    VALUES(7,2);
+INSERT INTO FigurinhasDesejadasSet(OfertasId,Figurinha_Id)
+    VALUES(7,3);
+go
+
+--select * from TROCASSET
+--delete TROCASSET where id=1
+
+
+-- Insere fotos
+-- 1
+INSERT INTO Imagens(Figurinha_Id,NomeArquivo,Descricao)
+    VALUES(1,'neymar.jpg','Neymar - Brasil');
+-- 2
+INSERT INTO Imagens(Figurinha_Id,NomeArquivo,Descricao)
+    VALUES(2,'luisFabiano.jpg','Luis Fabiano - Brasil');
+

@@ -1,0 +1,40 @@
+﻿@model TrocaFigurinhas.Models.Persistence.Ofertas
+
+<h3>Oferta @Model.Id</h3>
+<table class="TableOferta">
+    <thead>
+        <tr>
+            <td>Oferecidas</td>
+            <td>Desejadas</td>
+            @if (User.Identity.Name.ToLower() != Model.Usuario.Login.ToLower())
+            {
+                <td>Usuário</td>
+            }
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>
+                @foreach (var oferecidas in Model.FigurinhasOfertadas)
+                {
+                    <a class="FigurinhaDetalhe" idDetalhe="@("Figurinha_" + Model.Id + "_" + oferecidas.Figurinha.Id)">@oferecidas.Figurinha.Nome</a>
+                    @Html.Partial("_FigurinhaPartial", oferecidas.Figurinha, new ViewDataDictionary { { "index", "Figurinha_" + Model.Id + "_" + oferecidas.Figurinha.Id } })
+                    <br />                                             
+                }
+            </td>
+            <td>
+                @foreach (var desejadas in Model.FigurinhasDesejadas)
+                {
+                    <a class="FigurinhaDetalhe" idDetalhe="@("Figurinha_" + Model.Id + "_" + desejadas.Figurinha.Id)">@desejadas.Figurinha.Nome</a>
+                    @Html.Partial("_FigurinhaPartial", desejadas.Figurinha, new ViewDataDictionary { { "index", "Figurinha_" + Model.Id + "_" + desejadas.Figurinha.Id } })
+                    <br />                                            
+                }
+            </td>
+            @if (User.Identity.Name.ToLower() != Model.Usuario.Login.ToLower())
+            {
+                <td>@Model.Usuario.Login</td>
+            }
+        </tr>
+    </tbody>
+</table>
+

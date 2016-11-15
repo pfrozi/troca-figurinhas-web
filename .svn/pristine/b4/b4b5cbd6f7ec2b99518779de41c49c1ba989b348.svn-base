@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="97c29d1b-86ce-4dd9-b751-64cce5eb48f9" name="PFROZI@PFROZI-PC 2013-11-14 11:08:12" runUser="PFROZI-PC\PFROZI" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="5b24bc9e-bf9d-4979-baf2-60cffa867246">
+    <Deployment runDeploymentRoot="PFROZI_PFROZI-PC 2013-11-14 11_08_12">
+      <DeploymentItem filename="C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web\bin\TrocaFigurinhas.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-11-14T11:08:12.1167455-02:00" queuing="2013-11-14T11:08:27.7216381-02:00" start="2013-11-14T11:08:28.5466853-02:00" finish="2013-11-14T11:08:51.9060213-02:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="1" executed="1" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="c:\users\pfrozi\documents\visual studio 2010\projects\troca-figurinhas-web\troca-figurinhas-web.tests\bin\debug\troca-figurinhas-web.tests.dll" id="8ccc8e44-7f4f-3e44-c273-57f7ee6f033f">
+      <Execution id="bbba8e20-bd52-4217-ba67-c3168f0a088b" />
+      <TestMethod codeBase="C:/Users/PFROZI/documents/visual studio 2010/Projects/troca-figurinhas-web/troca-figurinhas-web.Tests/bin/Debug/troca-figurinhas-web.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TrocaFigurinhas.Tests.Business.UnitTest1, troca-figurinhas-web.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="8ccc8e44-7f4f-3e44-c273-57f7ee6f033f" executionId="bbba8e20-bd52-4217-ba67-c3168f0a088b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="bbba8e20-bd52-4217-ba67-c3168f0a088b" testId="8ccc8e44-7f4f-3e44-c273-57f7ee6f033f" testName="TestMethod1" computerName="PFROZI-PC" duration="00:00:17.2553697" startTime="2013-11-14T11:08:29.0517142-02:00" endTime="2013-11-14T11:08:51.0539726-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="bbba8e20-bd52-4217-ba67-c3168f0a088b">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TrocaFigurinhas.Tests.Business.UnitTest1.TestMethod1 threw exception: 
+System.ArgumentException: The specified named connection is either not found in the configuration, not intended to be used with the EntityClient provider, or not valid.</Message>
+          <StackTrace>    at System.Data.EntityClient.EntityConnection.ChangeConnectionString(String newConnectionString)
+   at System.Data.EntityClient.EntityConnection..ctor(String connectionString)
+   at System.Data.Objects.ObjectContext.CreateEntityConnection(String connectionString)
+   at System.Data.Objects.ObjectContext..ctor(String connectionString, String defaultContainerName)
+   at TrocaFigurinhas.Models.Persistence.ModelDBFigurinhasContainer..ctor() in C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web\Models\Persistence\ModelDBFigurinhas.Designer.cs:line 47
+   at TrocaFigurinhas.Models.Business.UsuarioBusiness.Buscar(String login) in C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web\Models\Business\UsuarioBusiness.cs:line 27
+   at TrocaFigurinhas.Tests.Business.UnitTest1.TestMethod1() in C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web.Tests\Business\UnitTest1.cs:line 19
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

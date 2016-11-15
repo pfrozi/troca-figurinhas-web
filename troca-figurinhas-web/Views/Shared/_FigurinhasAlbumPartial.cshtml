@@ -1,0 +1,51 @@
+﻿@model TrocaFigurinhas.Models.Persistence.Album
+
+
+<h3>@ViewData["Titulo"]</h3>
+
+<div>
+    <span class="textLabel">Álbum:</span>
+    <span class="textData">@Model.Titulo</span>
+</div>
+<div>
+    <span class="textLabel">Nome:</span>
+    <span class="textData">@Model.Titulo</span>
+</div>
+<div>
+    <span class="textLabel">Descrição:</span>
+    <span class="textData">@Model.Descricao</span>
+</div>
+<ul>
+    @foreach (var figurinha in Model.Figurinhas)
+    { 
+        
+        bool check=false;
+        if (ViewData["Oferta"] != null)
+        {
+            TrocaFigurinhas.Models.Persistence.Ofertas viewDataOfertas =
+                (TrocaFigurinhas.Models.Persistence.Ofertas)ViewData["Oferta"];
+                
+            if(ViewData["Tipo"]=="FigurinhasOfertadas"){
+                if(viewDataOfertas.FigurinhasOfertadas.Where(a=>a.Figurinha.Id==figurinha.Id).Count()>0){
+                    check=true;
+                }
+            }else
+            if(ViewData["Tipo"]=="FigurinhasDesejadas"){
+                if (viewDataOfertas.FigurinhasDesejadas.Where(a => a.Figurinha.Id==figurinha.Id).Count() > 0)
+                {
+                    check=true;
+                }
+            }
+        }
+        
+        
+        <li>
+            <input id="@(ViewData["Tipo"] + figurinha.Id.ToString())" name="@ViewData["Tipo"]" type="checkbox" value="@figurinha.Id" 
+            @(check?"checked":"") />
+            <a class="FigurinhaDetalhe" idDetalhe="Figurinha_@(ViewData["Tipo"] + figurinha.Id.ToString())">@(figurinha.Nome +" (" + @figurinha.Apelido + ")" + " - " + @figurinha.Equipe)</a>
+            @Html.Partial("_FigurinhaPartial", figurinha, new ViewDataDictionary { { "index", "Figurinha_" + ViewData["Tipo"] + figurinha.Id.ToString() } })
+        </li>
+        
+        
+    }
+</ul>

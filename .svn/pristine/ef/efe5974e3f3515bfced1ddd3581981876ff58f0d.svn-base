@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="cce7348f-a708-41b3-a69f-93a0d4fb23c3" name="PFROZI@PFROZI-PC 2013-11-14 22:57:13" runUser="PFROZI-PC\PFROZI" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="7d1a970a-a289-4def-954a-4a5c701dae47">
+    <Deployment runDeploymentRoot="PFROZI_PFROZI-PC 2013-11-14 22_57_13">
+      <DeploymentItem filename="C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web\bin\TrocaFigurinhas.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-11-14T22:57:13.5122880-02:00" queuing="2013-11-14T22:57:19.5046307-02:00" start="2013-11-14T22:57:19.9766577-02:00" finish="2013-11-14T22:58:32.8838278-02:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="3" executed="2" passed="1" error="0" failed="0" timeout="0" aborted="1" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="1" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="PFROZI-PC" outcome="Error" timestamp="2013-11-14T22:58:32.8558262-02:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="c:\users\pfrozi\documents\visual studio 2010\projects\troca-figurinhas-web\troca-figurinhas-web.tests\bin\debug\troca-figurinhas-web.tests.dll" id="8ccc8e44-7f4f-3e44-c273-57f7ee6f033f">
+      <Execution id="b574beda-e89b-4dc3-bb68-a3facad72006" />
+      <TestMethod codeBase="C:/Users/PFROZI/documents/visual studio 2010/Projects/troca-figurinhas-web/troca-figurinhas-web.Tests/bin/Debug/troca-figurinhas-web.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TrocaFigurinhas.Tests.Business.UnitTest1, troca-figurinhas-web.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\pfrozi\documents\visual studio 2010\projects\troca-figurinhas-web\troca-figurinhas-web.tests\bin\debug\troca-figurinhas-web.tests.dll" id="3bad39d9-1b60-7934-ef0b-2e1cfc98195b">
+      <Execution id="040f3718-12db-4419-b6aa-393f6a89afb9" />
+      <TestMethod codeBase="C:/Users/PFROZI/documents/visual studio 2010/Projects/troca-figurinhas-web/troca-figurinhas-web.Tests/bin/Debug/troca-figurinhas-web.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TrocaFigurinhas.Tests.Controllers.HomeControllerTest, troca-figurinhas-web.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\pfrozi\documents\visual studio 2010\projects\troca-figurinhas-web\troca-figurinhas-web.tests\bin\debug\troca-figurinhas-web.tests.dll" id="dec980b0-c26e-48d8-b474-c2e3c25f5791">
+      <Execution id="ed0ce93d-21a5-4952-92ea-10d75bb28727" />
+      <TestMethod codeBase="C:/Users/PFROZI/documents/visual studio 2010/Projects/troca-figurinhas-web/troca-figurinhas-web.Tests/bin/Debug/troca-figurinhas-web.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TrocaFigurinhas.Tests.Controllers.HomeControllerTest, troca-figurinhas-web.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="3bad39d9-1b60-7934-ef0b-2e1cfc98195b" executionId="040f3718-12db-4419-b6aa-393f6a89afb9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ccc8e44-7f4f-3e44-c273-57f7ee6f033f" executionId="b574beda-e89b-4dc3-bb68-a3facad72006" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dec980b0-c26e-48d8-b474-c2e3c25f5791" executionId="ed0ce93d-21a5-4952-92ea-10d75bb28727" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="040f3718-12db-4419-b6aa-393f6a89afb9" testId="3bad39d9-1b60-7934-ef0b-2e1cfc98195b" testName="About" computerName="PFROZI-PC" duration="00:00:00.2101562" startTime="2013-11-14T22:57:20.4346839-02:00" endTime="2013-11-14T22:57:24.7699319-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="040f3718-12db-4419-b6aa-393f6a89afb9">
+    </UnitTestResult>
+    <UnitTestResult executionId="b574beda-e89b-4dc3-bb68-a3facad72006" testId="8ccc8e44-7f4f-3e44-c273-57f7ee6f033f" testName="TestMethod1" computerName="PFROZI-PC" duration="00:01:08.0618929" startTime="2013-11-14T22:57:24.8019337-02:00" endTime="2013-11-14T22:58:32.8638266-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Aborted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b574beda-e89b-4dc3-bb68-a3facad72006">
+    </UnitTestResult>
+    <UnitTestResult executionId="ed0ce93d-21a5-4952-92ea-10d75bb28727" testId="dec980b0-c26e-48d8-b474-c2e3c25f5791" testName="Index" computerName="PFROZI-PC" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="ed0ce93d-21a5-4952-92ea-10d75bb28727">
+    </UnitTestResult>
+  </Results>
+</TestRun>

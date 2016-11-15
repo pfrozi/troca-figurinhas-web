@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="48bb63b9-1bed-4e3c-a817-a13ce13eeceb" name="PFROZI@PFROZI-PC 2013-11-14 11:17:05" runUser="PFROZI-PC\PFROZI" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="a0d155ca-d84f-40b9-9d15-0e02bf679da5">
+    <Deployment runDeploymentRoot="PFROZI_PFROZI-PC 2013-11-14 11_17_05">
+      <DeploymentItem filename="C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll" />
+      <DeploymentItem filename="C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web\bin\TrocaFigurinhas.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-11-14T11:17:05.7492676-02:00" queuing="2013-11-14T11:17:12.9836813-02:00" start="2013-11-14T11:17:13.5017110-02:00" finish="2013-11-14T11:18:56.2025851-02:00" />
+  <ResultSummary outcome="Error">
+    <Counters total="3" executed="1" passed="1" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="1" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <RunInfos>
+      <RunInfo computerName="PFROZI-PC" outcome="Error" timestamp="2013-11-14T11:18:56.1745835-02:00">
+        <Text>Test host process exited unexpectedly.</Text>
+      </RunInfo>
+    </RunInfos>
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestMethod1" storage="c:\users\pfrozi\documents\visual studio 2010\projects\troca-figurinhas-web\troca-figurinhas-web.tests\bin\debug\troca-figurinhas-web.tests.dll" id="8ccc8e44-7f4f-3e44-c273-57f7ee6f033f">
+      <Execution id="87157d7d-4dab-4d33-85d7-07b47279ec93" />
+      <TestMethod codeBase="C:/Users/PFROZI/documents/visual studio 2010/Projects/troca-figurinhas-web/troca-figurinhas-web.Tests/bin/Debug/troca-figurinhas-web.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TrocaFigurinhas.Tests.Business.UnitTest1, troca-figurinhas-web.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestMethod1" />
+    </UnitTest>
+    <UnitTest name="About" storage="c:\users\pfrozi\documents\visual studio 2010\projects\troca-figurinhas-web\troca-figurinhas-web.tests\bin\debug\troca-figurinhas-web.tests.dll" id="3bad39d9-1b60-7934-ef0b-2e1cfc98195b">
+      <Execution id="8dbcf840-5d86-473a-8e9e-31b5506de6d4" />
+      <TestMethod codeBase="C:/Users/PFROZI/documents/visual studio 2010/Projects/troca-figurinhas-web/troca-figurinhas-web.Tests/bin/Debug/troca-figurinhas-web.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TrocaFigurinhas.Tests.Controllers.HomeControllerTest, troca-figurinhas-web.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="About" />
+    </UnitTest>
+    <UnitTest name="Index" storage="c:\users\pfrozi\documents\visual studio 2010\projects\troca-figurinhas-web\troca-figurinhas-web.tests\bin\debug\troca-figurinhas-web.tests.dll" id="dec980b0-c26e-48d8-b474-c2e3c25f5791">
+      <Execution id="0b7d9aba-2208-42ef-bbc4-4cfab9a8df2d" />
+      <TestMethod codeBase="C:/Users/PFROZI/documents/visual studio 2010/Projects/troca-figurinhas-web/troca-figurinhas-web.Tests/bin/Debug/troca-figurinhas-web.Tests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="TrocaFigurinhas.Tests.Controllers.HomeControllerTest, troca-figurinhas-web.Tests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Index" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="3bad39d9-1b60-7934-ef0b-2e1cfc98195b" executionId="8dbcf840-5d86-473a-8e9e-31b5506de6d4" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8ccc8e44-7f4f-3e44-c273-57f7ee6f033f" executionId="87157d7d-4dab-4d33-85d7-07b47279ec93" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dec980b0-c26e-48d8-b474-c2e3c25f5791" executionId="0b7d9aba-2208-42ef-bbc4-4cfab9a8df2d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="8dbcf840-5d86-473a-8e9e-31b5506de6d4" testId="3bad39d9-1b60-7934-ef0b-2e1cfc98195b" testName="About" computerName="PFROZI-PC" duration="00:00:03.8384842" startTime="2013-11-14T11:17:13.9247352-02:00" endTime="2013-11-14T11:17:23.1792645-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8dbcf840-5d86-473a-8e9e-31b5506de6d4">
+    </UnitTestResult>
+    <UnitTestResult executionId="87157d7d-4dab-4d33-85d7-07b47279ec93" testId="8ccc8e44-7f4f-3e44-c273-57f7ee6f033f" testName="TestMethod1" computerName="PFROZI-PC" duration="00:00:34.5389620" startTime="2013-11-14T11:17:23.2252671-02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="87157d7d-4dab-4d33-85d7-07b47279ec93">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method TrocaFigurinhas.Tests.Business.UnitTest1.TestMethod1 threw exception: 
+System.Data.EntityException: The underlying provider failed on Open. ---&gt; System.Data.SqlServerCe.SqlCeException: The database file cannot be found. Check the path to the database. [ Data Source = C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\TestResults\PFROZI_PFROZI-PC 2013-11-14 11_17_05\Out\DBFigurinhas.sdf ]</Message>
+          <StackTrace>    at System.Data.SqlServerCe.SqlCeConnection.Open(Boolean silent)
+   at System.Data.SqlServerCe.SqlCeConnection.Open()
+   at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+ --- End of inner exception stack trace ---
+    at System.Data.EntityClient.EntityConnection.OpenStoreConnectionIf(Boolean openCondition, DbConnection storeConnectionToOpen, DbConnection originalConnection, String exceptionCode, String attemptedOperation, Boolean&amp; closeStoreConnectionOnFailure)
+   at System.Data.EntityClient.EntityConnection.Open()
+   at System.Data.Objects.ObjectContext.EnsureConnection()
+   at System.Data.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Objects.ObjectQuery`1.System.Collections.Generic.IEnumerable&lt;T&gt;.GetEnumerator()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.&lt;GetElementFunction&gt;b__0[TResult](IEnumerable`1 sequence)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.ExecuteSingle[TResult](IEnumerable`1 query, Expression queryRoot)
+   at System.Data.Objects.ELinq.ObjectQueryProvider.System.Linq.IQueryProvider.Execute[S](Expression expression)
+   at System.Linq.Queryable.First[TSource](IQueryable`1 source)
+   at TrocaFigurinhas.Models.Business.UsuarioBusiness.Buscar(String login) in C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web\Models\Business\UsuarioBusiness.cs:line 30
+   at TrocaFigurinhas.Tests.Business.UnitTest1.TestMethod1() in C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web.Tests\Business\UnitTest1.cs:line 19
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="0b7d9aba-2208-42ef-bbc4-4cfab9a8df2d" testId="dec980b0-c26e-48d8-b474-c2e3c25f5791" testName="Index" computerName="PFROZI-PC" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="NotExecuted" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="0b7d9aba-2208-42ef-bbc4-4cfab9a8df2d">
+    </UnitTestResult>
+  </Results>
+</TestRun>

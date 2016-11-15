@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns="http://schemas.microsoft.com/ado/2008/09/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="ModelDBFigurinhas" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation">
+  <EntityContainer Name="ModelDBFigurinhasContainer" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FigurinhaSet" EntityType="ModelDBFigurinhas.Figurinha" />
+    <EntitySet Name="UsuarioSet" EntityType="ModelDBFigurinhas.Usuario" />
+    <EntitySet Name="OfertasSet" EntityType="ModelDBFigurinhas.Ofertas" />
+    <EntitySet Name="Imagens" EntityType="ModelDBFigurinhas.Imagem" />
+    <EntitySet Name="AlbumSet" EntityType="ModelDBFigurinhas.Album" />
+    <AssociationSet Name="UsuariosOfertas" Association="ModelDBFigurinhas.UsuariosOfertas">
+      <End Role="Usuarios" EntitySet="UsuarioSet" />
+      <End Role="Ofertas" EntitySet="OfertasSet" />
+    </AssociationSet>
+    <AssociationSet Name="AlbumFigurinha" Association="ModelDBFigurinhas.AlbumFigurinha">
+      <End Role="Album" EntitySet="AlbumSet" />
+      <End Role="Figurinha" EntitySet="FigurinhaSet" />
+    </AssociationSet>
+    <AssociationSet Name="FigurinhaImagem" Association="ModelDBFigurinhas.FigurinhaImagem">
+      <End Role="Figurinha" EntitySet="FigurinhaSet" />
+      <End Role="Imagem" EntitySet="Imagens" />
+    </AssociationSet>
+    <EntitySet Name="TrocasSet" EntityType="ModelDBFigurinhas.Trocas" />
+    <AssociationSet Name="OfertasTrocas" Association="ModelDBFigurinhas.OfertasTrocas">
+      <End Role="Ofertas" EntitySet="OfertasSet" />
+      <End Role="Trocas" EntitySet="TrocasSet" />
+    </AssociationSet>
+    <AssociationSet Name="OfertasTrocas1" Association="ModelDBFigurinhas.OfertasTrocas1">
+      <End Role="Ofertas" EntitySet="OfertasSet" />
+      <End Role="Trocas" EntitySet="TrocasSet" />
+    </AssociationSet>
+    <EntitySet Name="FigurinhasOfertadasSet" EntityType="ModelDBFigurinhas.FigurinhasOfertadas" />
+    <EntitySet Name="FigurinhasDesejadasSet" EntityType="ModelDBFigurinhas.FigurinhasDesejadas" />
+    <AssociationSet Name="FigurinhasOfertadasFigurinha" Association="ModelDBFigurinhas.FigurinhasOfertadasFigurinha">
+      <End Role="FigurinhasOfertadas" EntitySet="FigurinhasOfertadasSet" />
+      <End Role="Figurinha" EntitySet="FigurinhaSet" />
+    </AssociationSet>
+    <AssociationSet Name="FigurinhasDesejadasFigurinha" Association="ModelDBFigurinhas.FigurinhasDesejadasFigurinha">
+      <End Role="FigurinhasDesejadas" EntitySet="FigurinhasDesejadasSet" />
+      <End Role="Figurinha" EntitySet="FigurinhaSet" />
+    </AssociationSet>
+    <AssociationSet Name="OfertasFigurinhasOfertadas" Association="ModelDBFigurinhas.OfertasFigurinhasOfertadas">
+      <End Role="Ofertas" EntitySet="OfertasSet" />
+      <End Role="FigurinhasOfertadas" EntitySet="FigurinhasOfertadasSet" />
+    </AssociationSet>
+    <AssociationSet Name="OfertasFigurinhasDesejadas" Association="ModelDBFigurinhas.OfertasFigurinhasDesejadas">
+      <End Role="Ofertas" EntitySet="OfertasSet" />
+      <End Role="FigurinhasDesejadas" EntitySet="FigurinhasDesejadasSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Figurinha">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Nome" Nullable="false" />
+    <NavigationProperty Name="Album" Relationship="ModelDBFigurinhas.AlbumFigurinha" FromRole="Figurinha" ToRole="Album" />
+    <NavigationProperty Name="Imagem" Relationship="ModelDBFigurinhas.FigurinhaImagem" FromRole="Figurinha" ToRole="Imagem" />
+    <Property Type="String" Name="Equipe" Nullable="false" />
+    <Property Type="String" Name="Apelido" Nullable="false" />
+    <NavigationProperty Name="FigurinhasOfertadas" Relationship="ModelDBFigurinhas.FigurinhasOfertadasFigurinha" FromRole="Figurinha" ToRole="FigurinhasOfertadas" />
+    <NavigationProperty Name="FigurinhasDesejadas" Relationship="ModelDBFigurinhas.FigurinhasDesejadasFigurinha" FromRole="Figurinha" ToRole="FigurinhasDesejadas" />
+  </EntityType>
+  <EntityType Name="Usuario">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="Nome" Nullable="false" />
+    <Property Type="String" Name="Email" Nullable="false" />
+    <Property Type="String" Name="Login" Nullable="false" />
+    <Property Type="String" Name="Senha" Nullable="false" />
+    <NavigationProperty Name="Ofertas" Relationship="ModelDBFigurinhas.UsuariosOfertas" FromRole="Usuarios" ToRole="Ofertas" />
+  </EntityType>
+  <EntityType Name="Ofertas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Usuario" Relationship="ModelDBFigurinhas.UsuariosOfertas" FromRole="Ofertas" ToRole="Usuarios" />
+    <NavigationProperty Name="TrocaSolicitante" Relationship="ModelDBFigurinhas.OfertasTrocas" FromRole="Ofertas" ToRole="Trocas" />
+    <NavigationProperty Name="TrocasSolicitado" Relationship="ModelDBFigurinhas.OfertasTrocas1" FromRole="Ofertas" ToRole="Trocas" />
+    <NavigationProperty Name="FigurinhasOfertadas" Relationship="ModelDBFigurinhas.OfertasFigurinhasOfertadas" FromRole="Ofertas" ToRole="FigurinhasOfertadas" />
+    <NavigationProperty Name="FigurinhasDesejadas" Relationship="ModelDBFigurinhas.OfertasFigurinhasDesejadas" FromRole="Ofertas" ToRole="FigurinhasDesejadas" />
+  </EntityType>
+  <EntityType Name="Imagem">
+    <Key>
+      <PropertyRef Name="Codigo" />
+    </Key>
+    <Property Type="Int32" Name="Codigo" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Type="String" Name="NomeArquivo" Nullable="false" MaxLength="35" />
+    <Property Type="String" Name="Descricao" Nullable="true" MaxLength="255" />
+    <NavigationProperty Name="Figurinha" Relationship="ModelDBFigurinhas.FigurinhaImagem" FromRole="Imagem" ToRole="Figurinha" />
+  </EntityType>
+  <EntityType Name="Album">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Figurinhas" Relationship="ModelDBFigurinhas.AlbumFigurinha" FromRole="Album" ToRole="Figurinha" />
+    <Property Type="String" Name="Titulo" Nullable="false" />
+    <Property Type="String" Name="Descricao" Nullable="false" />
+  </EntityType>
+  <Association Name="UsuariosOfertas">
+    <End Type="ModelDBFigurinhas.Usuario" Role="Usuarios" Multiplicity="1" />
+    <End Type="ModelDBFigurinhas.Ofertas" Role="Ofertas" Multiplicity="*" />
+  </Association>
+  <Association Name="AlbumFigurinha">
+    <End Type="ModelDBFigurinhas.Album" Role="Album" Multiplicity="1" />
+    <End Type="ModelDBFigurinhas.Figurinha" Role="Figurinha" Multiplicity="*" />
+  </Association>
+  <Association Name="FigurinhaImagem">
+    <End Type="ModelDBFigurinhas.Figurinha" Role="Figurinha" Multiplicity="1" />
+    <End Type="ModelDBFigurinhas.Imagem" Role="Imagem" Multiplicity="0..1" />
+  </Association>
+  <EntityType Name="Trocas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" Type="Int32" />
+    <Property Type="DateTime" Name="DataDaSolicitacao" Nullable="false" />
+    <NavigationProperty Name="OfertaSolicitante" Relationship="ModelDBFigurinhas.OfertasTrocas" FromRole="Trocas" ToRole="Ofertas" />
+    <Property Type="DateTime" Name="DataDaTroca" Nullable="true" />
+    <NavigationProperty Name="OfertaSolicitado" Relationship="ModelDBFigurinhas.OfertasTrocas1" FromRole="Trocas" ToRole="Ofertas" />
+    <Property Type="Boolean" Name="TrocaRealizada" Nullable="false" DefaultValue="False" />
+  </EntityType>
+  <Association Name="OfertasTrocas">
+    <End Type="ModelDBFigurinhas.Ofertas" Role="Ofertas" Multiplicity="1" />
+    <End Type="ModelDBFigurinhas.Trocas" Role="Trocas" Multiplicity="0..1" />
+  </Association>
+  <Association Name="OfertasTrocas1">
+    <End Type="ModelDBFigurinhas.Ofertas" Role="Ofertas" Multiplicity="1" />
+    <End Type="ModelDBFigurinhas.Trocas" Role="Trocas" Multiplicity="0..1" />
+  </Association>
+  <EntityType Name="FigurinhasOfertadas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Figurinha" Relationship="ModelDBFigurinhas.FigurinhasOfertadasFigurinha" FromRole="FigurinhasOfertadas" ToRole="Figurinha" />
+    <NavigationProperty Name="Ofertas" Relationship="ModelDBFigurinhas.OfertasFigurinhasOfertadas" FromRole="FigurinhasOfertadas" ToRole="Ofertas" />
+    <Property Type="Int32" Name="OfertasId" Nullable="false" />
+  </EntityType>
+  <EntityType Name="FigurinhasDesejadas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Type="Int32" Name="Id" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="Figurinha" Relationship="ModelDBFigurinhas.FigurinhasDesejadasFigurinha" FromRole="FigurinhasDesejadas" ToRole="Figurinha" />
+    <NavigationProperty Name="Ofertas" Relationship="ModelDBFigurinhas.OfertasFigurinhasDesejadas" FromRole="FigurinhasDesejadas" ToRole="Ofertas" />
+    <Property Type="Int32" Name="OfertasId" Nullable="false" />
+  </EntityType>
+  <Association Name="FigurinhasOfertadasFigurinha">
+    <End Type="ModelDBFigurinhas.FigurinhasOfertadas" Role="FigurinhasOfertadas" Multiplicity="*" />
+    <End Type="ModelDBFigurinhas.Figurinha" Role="Figurinha" Multiplicity="1" />
+  </Association>
+  <Association Name="FigurinhasDesejadasFigurinha">
+    <End Type="ModelDBFigurinhas.FigurinhasDesejadas" Role="FigurinhasDesejadas" Multiplicity="*" />
+    <End Type="ModelDBFigurinhas.Figurinha" Role="Figurinha" Multiplicity="1" />
+  </Association>
+  <Association Name="OfertasFigurinhasOfertadas">
+    <End Type="ModelDBFigurinhas.Ofertas" Role="Ofertas" Multiplicity="1" />
+    <End Type="ModelDBFigurinhas.FigurinhasOfertadas" Role="FigurinhasOfertadas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ofertas">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FigurinhasOfertadas">
+        <PropertyRef Name="OfertasId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="OfertasFigurinhasDesejadas">
+    <End Type="ModelDBFigurinhas.Ofertas" Role="Ofertas" Multiplicity="1" />
+    <End Type="ModelDBFigurinhas.FigurinhasDesejadas" Role="FigurinhasDesejadas" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ofertas">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FigurinhasDesejadas">
+        <PropertyRef Name="OfertasId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

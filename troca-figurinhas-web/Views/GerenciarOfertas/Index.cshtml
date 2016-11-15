@@ -1,0 +1,26 @@
+﻿@model IEnumerable<TrocaFigurinhas.Models.Persistence.Ofertas>
+
+@{
+    ViewBag.Title = "Gerenciar Ofertas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Gerenciar Ofertas</h2>
+
+<p>
+    @Html.ActionLink("Nova Oferta", "Create")
+</p>
+<div class="MinhasFigurinhas">
+    
+@foreach (var item in Model) {
+   
+    <div>
+        @Html.Partial("_OfertaPartial", item)
+            
+        @Html.ActionLink("Editar", "Edit", new { id=item.Id }) |
+        @Html.ActionLink("Excluir", "Delete", new { id = item.Id })
+    </div>
+     
+}
+
+</div>

@@ -1,0 +1,22 @@
+﻿@model TrocaFigurinhas.Models.Persistence.Ofertas
+
+@{
+    ViewBag.Title = "Excluir Oferta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Excluir Oferta</h2>
+
+<h3>Você tem certeza que deseja excluir esta oferta?</h3>
+<fieldset>
+    <legend>Ofertas</legend>
+    <div class="MinhasFigurinhas">
+        @Html.Partial("_OfertaPartial", Model)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Excluir" /> |
+        @Html.ActionLink("Voltar", "Index")
+    </p>
+}

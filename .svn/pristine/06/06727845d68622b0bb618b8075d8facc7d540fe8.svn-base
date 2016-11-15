@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelDBFigurinhasStoreContainer" CdmEntityContainer="ModelDBFigurinhasContainer">
+    <EntitySetMapping Name="FigurinhaSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDBFigurinhas.Figurinha)">
+        <MappingFragment StoreEntitySet="FigurinhaSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Equipe" ColumnName="Equipe" />
+          <ScalarProperty Name="Apelido" ColumnName="Apelido" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UsuarioSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDBFigurinhas.Usuario)">
+        <MappingFragment StoreEntitySet="UsuarioSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Nome" ColumnName="Nome" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Login" ColumnName="Login" />
+          <ScalarProperty Name="Senha" ColumnName="Senha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="OfertasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDBFigurinhas.Ofertas)">
+        <MappingFragment StoreEntitySet="OfertasSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Imagens">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDBFigurinhas.Imagem)">
+        <MappingFragment StoreEntitySet="Imagens">
+          <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+          <ScalarProperty Name="NomeArquivo" ColumnName="NomeArquivo" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AlbumSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDBFigurinhas.Album)">
+        <MappingFragment StoreEntitySet="AlbumSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Titulo" ColumnName="Titulo" />
+          <ScalarProperty Name="Descricao" ColumnName="Descricao" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TrocasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDBFigurinhas.Trocas)">
+        <MappingFragment StoreEntitySet="TrocasSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DataDaSolicitacao" ColumnName="DataDaSolicitacao" />
+          <ScalarProperty Name="DataDaTroca" ColumnName="DataDaTroca" />
+          <ScalarProperty Name="TrocaRealizada" ColumnName="TrocaRealizada" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FigurinhasOfertadasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDBFigurinhas.FigurinhasOfertadas)">
+        <MappingFragment StoreEntitySet="FigurinhasOfertadasSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OfertasId" ColumnName="OfertasId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FigurinhasDesejadasSet">
+      <EntityTypeMapping TypeName="IsTypeOf(ModelDBFigurinhas.FigurinhasDesejadas)">
+        <MappingFragment StoreEntitySet="FigurinhasDesejadasSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="OfertasId" ColumnName="OfertasId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="UsuariosOfertas" TypeName="ModelDBFigurinhas.UsuariosOfertas" StoreEntitySet="OfertasSet">
+      <EndProperty Name="Usuarios">
+        <ScalarProperty Name="Id" ColumnName="Usuario_Id" />
+      </EndProperty>
+      <EndProperty Name="Ofertas">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AlbumFigurinha" TypeName="ModelDBFigurinhas.AlbumFigurinha" StoreEntitySet="FigurinhaSet">
+      <EndProperty Name="Album">
+        <ScalarProperty Name="Id" ColumnName="Album_Id" />
+      </EndProperty>
+      <EndProperty Name="Figurinha">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FigurinhaImagem" TypeName="ModelDBFigurinhas.FigurinhaImagem" StoreEntitySet="Imagens">
+      <EndProperty Name="Figurinha">
+        <ScalarProperty Name="Id" ColumnName="Figurinha_Id" />
+      </EndProperty>
+      <EndProperty Name="Imagem">
+        <ScalarProperty Name="Codigo" ColumnName="Codigo" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="OfertasTrocas" TypeName="ModelDBFigurinhas.OfertasTrocas" StoreEntitySet="TrocasSet">
+      <EndProperty Name="Ofertas">
+        <ScalarProperty Name="Id" ColumnName="OfertaSolicitante_Id" />
+      </EndProperty>
+      <EndProperty Name="Trocas">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="OfertasTrocas1" TypeName="ModelDBFigurinhas.OfertasTrocas1" StoreEntitySet="TrocasSet">
+      <EndProperty Name="Ofertas">
+        <ScalarProperty Name="Id" ColumnName="OfertaSolicitado_Id" />
+      </EndProperty>
+      <EndProperty Name="Trocas">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FigurinhasOfertadasFigurinha" TypeName="ModelDBFigurinhas.FigurinhasOfertadasFigurinha" StoreEntitySet="FigurinhasOfertadasSet">
+      <EndProperty Name="Figurinha">
+        <ScalarProperty Name="Id" ColumnName="Figurinha_Id" />
+      </EndProperty>
+      <EndProperty Name="FigurinhasOfertadas">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="FigurinhasDesejadasFigurinha" TypeName="ModelDBFigurinhas.FigurinhasDesejadasFigurinha" StoreEntitySet="FigurinhasDesejadasSet">
+      <EndProperty Name="Figurinha">
+        <ScalarProperty Name="Id" ColumnName="Figurinha_Id" />
+      </EndProperty>
+      <EndProperty Name="FigurinhasDesejadas">
+        <ScalarProperty Name="Id" ColumnName="Id" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>

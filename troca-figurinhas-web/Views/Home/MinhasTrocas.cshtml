@@ -1,0 +1,37 @@
+﻿@model TrocaFigurinhas.Models.Persistence.Usuario
+
+@{
+    ViewBag.Title = "MinhasFigurinhas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Meu Profile</h2>
+
+<fieldset>
+    <legend>Meus Dados</legend>
+
+    <div class="display-label">Nome</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Nome)
+    </div>
+
+    <div class="display-label">Email</div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Email)
+    </div>
+
+</fieldset>
+
+<div class="MinhasFigurinhas">
+<h2>Minhas Trocas</h2>
+@foreach (var oferta in Model.Ofertas)
+{
+    if (oferta.TrocaSolicitante != null){
+        @Html.Partial("_TrocaPartial", oferta.TrocaSolicitante)
+        }
+    if (oferta.TrocasSolicitado != null)
+    {
+        @Html.Partial("_TrocaPartial", oferta.TrocasSolicitado)
+    }
+}
+</div>

@@ -1,0 +1,29 @@
+﻿@model TrocaFigurinhas.Models.Persistence.Trocas
+
+<div>         
+<h4>Detalhes da Troca @Model.Id</h4>
+    
+        <div>
+            <span class="textLabel">Código:</span>
+            <span class="textData">@Model.Id</span>
+       </div>
+       <div>
+            <span class="textLabel">Data e hora da Troca:</span>
+            <span class="textData">@Model.DataDaTroca</span>
+       </div>
+       <div>
+            <span class="textLabel">Troca confirmada:</span>
+            <span class="textData">@(Model.TrocaRealizada ? "Sim" : "Não")</span>
+       </div>
+    </div>
+<div> 
+    <h4>Ofertas envolvidas na troca:</h4>
+    <ul>
+        <li>
+            @Html.Partial("_OfertaPartial", Model.OfertaSolicitante)
+        </li>
+        <li>
+            @Html.Partial("_OfertaPartial", Model.OfertaSolicitado)
+        </li>
+    </ul>
+</div> 

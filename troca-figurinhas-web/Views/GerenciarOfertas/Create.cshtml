@@ -1,0 +1,33 @@
+﻿@model TrocaFigurinhas.Models.Persistence.Album
+
+@{
+    ViewBag.Title = "Criar Oferta";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    TrocaFigurinhas.Models.Persistence.Album viewBagAlbum = ViewBag.Album;
+}
+
+<h2>Criar Oferta</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Ofertas</legend>
+            <div id="divListaFigurinhasOfertadas">
+                @Html.Partial("_FigurinhasAlbumPartial", viewBagAlbum, new ViewDataDictionary { { "Tipo", "FigurinhasOfertadas" }, { "Titulo", "Figurinhas Ofertadas" } })
+            </div>
+            <br />
+            <div id="divListaFigurinhasDesejadas">
+                @Html.Partial("_FigurinhasAlbumPartial", viewBagAlbum, new ViewDataDictionary { { "Tipo", "FigurinhasDesejadas" }, { "Titulo", "Figurinhas Desejadas" } })
+            </div>
+        <p>
+            <input type="submit" value="Criar Oferta" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Voltar", "Index")
+</div>

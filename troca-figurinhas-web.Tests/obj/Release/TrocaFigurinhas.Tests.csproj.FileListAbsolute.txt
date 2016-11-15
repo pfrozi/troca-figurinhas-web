@@ -1,0 +1,10 @@
+C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web.Tests\bin\Release\troca-figurinhas-web.Tests.dll.config
+C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web.Tests\bin\Release\troca-figurinhas-web.Tests.dll
+C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web.Tests\bin\Release\troca-figurinhas-web.Tests.pdb
+C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web.Tests\bin\Release\EntityFramework.dll
+C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web.Tests\bin\Release\TrocaFigurinhas.dll
+C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web.Tests\bin\Release\TrocaFigurinhas.pdb
+C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web.Tests\bin\Release\EntityFramework.xml
+C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web.Tests\obj\Release\ResolveAssemblyReference.cache
+C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web.Tests\obj\Release\troca-figurinhas-web.Tests.dll
+C:\Users\PFROZI\documents\visual studio 2010\Projects\troca-figurinhas-web\troca-figurinhas-web.Tests\obj\Release\troca-figurinhas-web.Tests.pdb
